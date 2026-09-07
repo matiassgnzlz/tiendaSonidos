@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Heartz Tools</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">HEARTZ TOOLS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="catalogo.html">CATÁLOGO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="contacto.html" style="color: white; font-weight: bold;">CONTACTO</a></li>
+            </ul>
+           <div class="nav-actions">
+                <a href="carrito.html" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html" class="login-btn" style="text-decoration: none;">INICIAR SESIÓN</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor-contacto">
+        <section class="encabezado-contacto">
+            <h2>CONTÁCTANOS</h2>
+            <p>¿Tienes dudas sobre algún instrumento o tu pedido? Escríbenos.</p>
+        </section>
+
+        <section class="formulario-seccion">
+            <div id="caja-errores" class="oculto"></div>
+
+            <form id="formulario-contacto" action="#" method="POST">
+                <div class="grupo-input">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" autocomplete="name">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="text" id="email" name="email" placeholder="Ej: juan@correo.com" autocomplete="email">
+                </div>
+
+                <div class="grupo-input">
+                    <label for="asunto">Asunto:</label>
+                    <select id="asunto" name="asunto">
+                        <option value="">Selecciona un motivo...</option>
+                        <option value="compra">Consulta sobre una compra</option>
+                        <option value="stock">Disponibilidad de stock</option>
+                        <option value="reclamo">Problema con mi pedido</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Heartz Tools. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="assets/js/validaciones.js"></script>
+</body>
+</html>

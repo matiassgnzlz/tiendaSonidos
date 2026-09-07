@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - Heartz Tools</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">HEARTZ TOOLS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="catalogo.html" style="color: white; font-weight: bold;">CATÁLOGO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn"><i class="fas fa-shopping-cart"></i></button>
+                <button class="login-btn">INICIAR SESIÓN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor-detalle">
+        <div class="vista-producto">
+            <div class="imagen-detalle">
+                <!-- Le agregamos el id="imagen-principal" -->
+                <img id="imagen-principal" src="assets/img/guitarra-negro.jpg" alt="Guitarra">
+            </div>
+            
+            <div class="info-detalle">
+                <h2>Guitarra Stratocaster</h2>
+                <p class="precio-detalle">$350.000</p>
+                <p class="descripcion">Excelente guitarra ideal para principiantes y profesionales. Cuerpo sólido y mástil de arce para un sonido brillante y definido.</p>
+                
+                <form class="opciones-compra">
+                    <div class="grupo-opcion">
+                        <label for="color">Color:</label>
+                       <select id="color" name="color" data-producto="guitarra">
+                            <option value="negro">Negro Clásico</option>
+                            <option value="rojo">Rojo</option>
+                            <option value="blanco">Natural</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-opcion">
+                        <label for="estuche">Agregar funda/estuche:</label>
+                        <select id="estuche" name="estuche">
+                            <option value="sin">Sin estuche (+$0)</option>
+                            <option value="funda">Funda acolchada (+$25.000)</option>
+                            <option value="rigido">Estuche rígido (+$50.000)</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn-agregar-grande">Añadir al Carrito</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Heartz Tools. Todos los derechos reservados.</p>
+    </footer>
+
+
+    <script src="assets/js/validaciones.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Heartz Tools</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">HEARTZ TOOLS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="catalogo.html">CATÁLOGO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" style="color: white;"><i class="fas fa-shopping-cart"></i></button>
+                <button class="login-btn">INICIAR SESIÓN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor-carrito">
+        <h2>TU CARRITO DE COMPRAS</h2>
+
+        <div class="tabla-carrito-contenedor">
+            <table class="tabla-carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Detalle / Color</th>
+                        <th>Precio</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-carrito">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="resumen-carrito">
+            <div class="total-container">
+                <h3>Total: <span id="total-precio">$0</span></h3>
+            </div>
+            <div class="acciones-carrito">
+                <button id="vaciar-carrito" class="btn-vaciar">Vaciar Carrito</button>
+                <button id="procesar-compra" class="btn-comprar">Finalizar Compra</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Heartz Tools. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="assets/js/validaciones.js"></script>
+</body>
+</html>

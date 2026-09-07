@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - Heartz Tools</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">HEARTZ TOOLS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="catalogo.html" style="color: white; font-weight: bold;">CATÁLOGO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" aria-label="Carrito de compras"><i class="fas fa-shopping-cart"></i></button>
+                <button class="login-btn">INICIAR SESIÓN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor-detalle">
+        <div class="vista-producto">
+            <div class="imagen-detalle">
+                <img id="imagen-principal" src="assets/img/acordeon-rojo.jpg" alt="Acordeón">
+            </div>
+            
+            <div class="info-detalle">
+                <h2>Acordeón Profesional</h2>
+                <p class="precio-detalle">$1.200.000</p>
+                <p class="descripcion">Excelente acordeón especialmente para profesionales.</p>
+                
+                <div class="acordeon-contenedor">
+                    <details class="acordeon-item" open>
+                        <summary>Opciones de Compra</summary>
+                        <form class="opciones-compra" style="padding: 15px;">
+                            <div class="grupo-opcion">
+                                <label for="color">Color:</label>
+                                <select id="color" name="color" data-producto="acordeon">
+                                    <option value="rojo">Rojo</option>
+                                    <option value="negro">Negro</option>
+                                    <option value="azul">Azul</option>
+                                </select>
+                            </div>
+
+                            <button type="button" class="btn-agregar-grande" style="margin-top: 15px;">Añadir al Carrito</button>
+                        </form>
+                    </details>
+
+                    <details class="acordeon-item">
+                        <summary>Especificaciones Técnicas</summary>
+                        <p style="padding: 15px; margin: 0; color: #555;">Acordeón de alta gama con fuelles reforzados y excelente proyección de sonido.</p>
+                    </details>
+
+                    <details class="acordeon-item">
+                        <summary>Envíos y Despachos</summary>
+                        <p style="padding: 15px; margin: 0; color: #555;">Despachos seguros a todo Santiago y regiones.</p>
+                    </details>
+
+                    <details class="acordeon-item">
+                        <summary>Garantía</summary>
+                        <p style="padding: 15px; margin: 0; color: #555;">Garantía legal de 6 meses por fallas de fábrica.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Heartz Tools. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="assets/js/validaciones.js"></script>
+    
+</body>
+</html>

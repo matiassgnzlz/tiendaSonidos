@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Heartz Tools</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">HEARTZ TOOLS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="catalogo.html">CATÁLOGO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="carrito.html" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html" class="login-btn" style="text-decoration: none;">INICIAR SESIÓN</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor-auth">
+        <div class="caja-auth">
+            <h2>Crear Cuenta</h2>
+            <form id="form-registro">
+                <div class="grupo-opcion">
+                    <label for="nombre-reg">Nombre Completo:</label>
+                    <input type="text" id="nombre-reg" required>
+                </div>
+
+                <div class="grupo-opcion">
+                    <label for="email-reg">Correo Electrónico:</label>
+                    <input type="email" id="email-reg" required>
+                </div>
+
+                <div class="grupo-opcion">
+                    <label for="password-reg">Contraseña:</label>
+                    <input type="password" id="password-reg" required>
+                </div>
+
+                <button type="submit" class="btn-agregar-grande">Registrarse</button>
+            </form>
+            <p class="texto-alternativo">¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Heartz Tools. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="assets/js/validaciones.js"></script>
+</body>
+</html>

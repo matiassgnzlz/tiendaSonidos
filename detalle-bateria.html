@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batería Acústica - Heartz Tools</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">HEARTZ TOOLS</div>
+            <ul class="nav-links">
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="catalogo.html" style="color: white; font-weight: bold;">CATÁLOGO</a></li>
+                <li><a href="nosotros.html">NOSOTROS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-btn" aria-label="Carrito de compras"><i class="fas fa-shopping-cart"></i></button>
+                <button class="login-btn">INICIAR SESIÓN</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor-detalle">
+        <div class="vista-producto">
+            <div class="imagen-detalle">
+                <img id="imagen-principal" src="assets/img/bateria-azul.jpg" alt="Batería Acústica">
+            </div>
+            
+            <div class="info-detalle">
+                <h2>Batería Acústica 5 piezas</h2>
+                <p class="precio-detalle">$520.000</p>
+                <p class="descripcion">Batería acústica de 5 piezas ideal para todos los niveles. Incluye bombo, toms, caja, atril para platillos, pedal de bombo y asiento. Construcción robusta para un sonido potente y resonante.</p>
+                
+                <form class="opciones-compra">
+                    <div class="grupo-opcion">
+                        <label for="color">Color:</label>
+                        <select id="color" name="color" data-producto="bateria">
+                            <option value="azul">Azul Electrico</option>
+                            <option value="negro">Negro</option>
+
+                        </select>
+                    </div>
+
+                    <div class="grupo-opcion">
+                        <label for="platillos">Agregar Set de Platillos:</label>
+                        <select id="platillos" name="platillos">
+                            <option value="sin">Sin platillos (+$0)</option>
+                            <option value="basico">Set Básico (Hi-hat y Crash) (+$80.000)</option>
+                            <option value="completo">Set Completo (Hi-hat, Crash, Ride) (+$150.000)</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="btn-agregar-grande">Añadir al Carrito</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Heartz Tools. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="assets/js/validaciones.js"></script>
+</body>
+</html>

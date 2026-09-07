@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - Heartz Tools</title>
+    <link rel="stylesheet" href="assets/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">HEARTZ TOOLS - ADMIN</div>
+            <ul class="nav-links">
+                <li><a href="index.html">VER SITIO WEB</a></li>
+                <li><a href="#" id="btn-cerrar-sesion-admin" style="color: #ff6b6b;">CERRAR SESIÓN</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-admin">
+        <h2>Panel de Gestión de Productos</h2>
+
+        <div class="admin-grid-layout">
+            <div class="caja-auth admin-form-box">
+                <h3>Agregar Nuevo Producto</h3>
+                <form id="form-crear-producto">
+                    <div class="grupo-opcion">
+                        <label for="admin-titulo">Nombre del Producto:</label>
+                        <input type="text" id="admin-titulo" required>
+                    </div>
+
+                    <div class="grupo-opcion">
+                        <label for="admin-precio">Precio (ej: $150.000):</label>
+                        <input type="text" id="admin-precio" required>
+                    </div>
+
+                    <div class="grupo-opcion">
+                        <label for="admin-imagen">Nombre de la Imagen (ej: bajo-negro.jpg):</label>
+                        <input type="text" id="admin-imagen" required>
+                    </div>
+
+                    <button type="submit" class="btn-agregar-grande">Publicar en Catálogo</button>
+                </form>
+            </div>
+
+            <div class="admin-tabla-box">
+                <h3>Productos Actuales</h3>
+                <div class="tabla-carrito-contenedor">
+                    <table class="tabla-carrito">
+                        <thead>
+                            <tr>
+                                <th>Producto</th>
+                                <th>Precio</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="admin-lista-productos">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Heartz Tools. Panel de Administración.</p>
+    </footer>
+
+    <script src="assets/js/validaciones.js"></script>
+</body>
+</html>

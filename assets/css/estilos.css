@@ -11,32 +11,82 @@ body {
 }
 
 /* ================= MENÚ DE NAVEGACIÓN ================= */
+/* ================= MENÚ DE NAVEGACIÓN ================= */
 .navbar {
-    background-color: #0d1b2a; /* Azul oscuro elegante */
+    background-color: #0d1b2a; 
     color: white;
     display: flex;
+    flex-wrap: wrap; /* Permite que los enlaces bajen a la siguiente línea */
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
+    position: relative; /* Necesario para centrar el logo perfectamente */
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.menu-btn:hover {
+    color: #8d99ae;
 }
 
 .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Centra el texto de forma exacta */
     font-weight: 600;
     font-size: 1.2rem;
     letter-spacing: 2px;
 }
 
-.nav-links {
+.nav-actions {
     display: flex;
+    align-items: center;
+}
+
+.cart-btn {
+    background: transparent;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    color: #8d99ae;
+}
+
+/* Contenedor de enlaces */
+.nav-links {
+    width: 100%;
+    display: none; /* Ocultos por defecto */
+    flex-direction: row; /* Aparecen en fila horizontal */
+    justify-content: center; /* Centrados */
     list-style: none;
     gap: 30px;
+    padding-top: 15px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
+}
+
+/* Esta clase se agregará con JavaScript al hacer clic */
+.nav-links.mostrar {
+    display: flex;
 }
 
 .nav-links a {
-    color: #8d99ae; /* Gris azulado para los links inactivos */
+    color: #8d99ae; 
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     letter-spacing: 1px;
+    text-transform: uppercase;
     transition: color 0.3s;
 }
 
@@ -44,33 +94,13 @@ body {
     color: white;
 }
 
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.cart-btn {
-    background: transparent;
-    border: 1px solid #8d99ae;
-    color: white;
-    padding: 8px 12px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.cart-btn:hover {
-    background-color: rgba(255,255,255,0.1);
-}
-
-.login-btn {
-    background: white;
-    color: #0d1b2a;
-    border: none;
-    padding: 9px 20px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    cursor: pointer;
+/* Hacer que en celulares los enlaces se pongan en columna en lugar de fila */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
 }
 
 /* ================= BANNER PRINCIPAL (HERO - INICIO) ================= */
@@ -778,4 +808,15 @@ footer {
     gap: 30px;
     max-width: 1100px;
     margin: 0 auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ocupa al menos el 100% del alto de la ventana */
+    margin: 0;
+}
+
+main {
+    flex: 1; /* Hace que el contenido principal crezca y empuje el footer al final */
 }

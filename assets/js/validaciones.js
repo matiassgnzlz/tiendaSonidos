@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     
-    // 1. Validaciones del formulario de contacto
     const formulario = document.getElementById("formulario-contacto");
     const cajaErrores = document.getElementById("caja-errores");
 
@@ -38,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 2. Cambio dinámico de imagen por color (ahora con .jpg)
     const selectorColor = document.getElementById("color");
     const imagenPrincipal = document.getElementById("imagen-principal");
 
@@ -50,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 3. Botón agregar al carrito desde la página de detalles
     const btnAgregar = document.querySelector(".btn-agregar-grande");
     if (btnAgregar) {
         btnAgregar.addEventListener("click", function() {
@@ -73,7 +70,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 4. Lógica de la tabla del carrito de compras
     const listaCarrito = document.getElementById("lista-carrito");
     const totalPrecio = document.getElementById("total-precio");
     const btnVaciar = document.getElementById("vaciar-carrito");
@@ -138,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function() {
         mostrarCarrito();
     }
 
-    // 5. Inicializar productos por defecto en localStorage con extensión .jpg
     if (!localStorage.getItem("productosHeartz")) {
         const productosIniciales = [
             { titulo: "Guitarra Casual", precio: "$350.000", imagen: "guitarra-negro.jpg", link: "detalle-guitarra.html" },
@@ -149,7 +144,6 @@ document.addEventListener("DOMContentLoaded", function() {
         localStorage.setItem("productosHeartz", JSON.stringify(productosIniciales));
     }
 
-    // 6. Formulario de registro de usuarios
     const formRegistro = document.getElementById("form-registro");
     if (formRegistro) {
         formRegistro.addEventListener("submit", function(evento) {
@@ -173,7 +167,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 7. Formulario de inicio de sesión (Clientes y Administrador)
     const formLogin = document.getElementById("form-login");
     if (formLogin) {
         formLogin.addEventListener("submit", function(evento) {
@@ -202,7 +195,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 8. Protección de ruta del Panel de Administración
     if (window.location.pathname.includes("admin.html")) {
         const sesion = JSON.parse(localStorage.getItem("sesionActiva"));
         if (!sesion || sesion.rol !== "admin") {
@@ -220,7 +212,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 9. Crear producto desde el panel de administración
     const formCrearProducto = document.getElementById("form-crear-producto");
     if (formCrearProducto) {
         formCrearProducto.addEventListener("submit", function(e) {
@@ -272,7 +263,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     cargarAdminProductos();
 
-    // 10. Renderizar catálogo dinámico en la vista de usuario
     const gridCatalogo = document.getElementById("grid-catalogo");
     if (gridCatalogo) {
         let productos = JSON.parse(localStorage.getItem("productosHeartz")) || [];

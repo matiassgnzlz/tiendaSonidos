@@ -12,20 +12,17 @@
 
 <header>
         <nav class="navbar">
-            <!-- Botón Hamburguesa a la izquierda -->
+            
             <button class="menu-btn" id="btn-menu">
                 <i class="fas fa-bars"></i>
             </button>
 
-            <!-- Logo centrado -->
             <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">HEARTZ TOOLS</a>
             
-            <!-- Carrito a la derecha -->
             <div class="nav-actions">
                 <a href="carrito.html" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
             </div>
 
-            <!-- Enlaces abajo (ocultos por defecto) -->
             <ul class="nav-links" id="enlaces-menu">
                 <li><a href="index.html">INICIO</a></li>
                 <li><a href="catalogo.html">CATÁLOGO</a></li> 
@@ -37,10 +34,9 @@
     </header>
 
     <main>
-        <!-- Sección del Carrusel (Hero) -->
+        
         <section class="hero" style="position: relative; overflow: hidden; z-index: 1;">
             
-            <!-- Imagen de fondo -->
             <img id="img-carrusel" src="assets/img/audifonos.jpg" alt="Fondo Carrusel" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
             
             <button class="carousel-btn left" id="btn-izq"><i class="fas fa-chevron-left"></i></button>
@@ -52,13 +48,12 @@
             <button class="carousel-btn right" id="btn-der"><i class="fas fa-chevron-right"></i></button>
         </section>
 
-        <!-- Sección de Productos Destacados -->
         <section class="destacados">
             <h3>PRODUCTOS DESTACADOS</h3>
             <div class="arrow-down">↓</div>
             
             <div class="grid-productos">
-                <!-- Tarjeta Guitarra -->
+                
                 <article class="producto-card">
                     <a href="detalle-guitarra.html" style="text-decoration: none; color: inherit; display: block; text-align: center;">
                         <img src="assets/img/guitarra-negro.jpg" alt="Guitarras">
@@ -66,7 +61,6 @@
                     </a>
                 </article>
                 
-                <!-- Tarjeta Batería -->
                 <article class="producto-card">
                     <a href="detalle-bateria.html" style="text-decoration: none; color: inherit; display: block; text-align: center;">
                         <img src="assets/img/bateria-azul.jpg" alt="Baterías">
@@ -74,7 +68,6 @@
                     </a>
                 </article>
                 
-                <!-- Tarjeta Audífonos -->
                 <article class="producto-card">
                     <a href="detalle-auriculares.html" style="text-decoration: none; color: inherit; display: block; text-align: center;">
                         <img src="assets/img/auriculares-negro.jpg" alt="Audífonos">
@@ -89,7 +82,6 @@
         <p>&copy; 2026 Heartz Tools. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Script del Carrusel -->
     <script>
         const imagenes = [
             'assets/img/audifonos.jpg', 
@@ -130,13 +122,12 @@
         }
     </script>
 
-    <!-- Script del Menú Hamburguesa -->
     <script>
         const btnMenu = document.getElementById('btn-menu');
         const enlacesMenu = document.getElementById('enlaces-menu');
 
         btnMenu.addEventListener('click', () => {
-            // Agrega o quita la clase "mostrar" cada vez que haces clic
+            
             enlacesMenu.classList.toggle('mostrar');
         });
     </script>

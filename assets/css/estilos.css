@@ -1,4 +1,4 @@
-/* ================= RESET Y CONFIGURACIÓN BASE ================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,19 +10,16 @@ body {
     background-color: #f8f9fa;
 }
 
-/* ================= MENÚ DE NAVEGACIÓN ================= */
-/* ================= MENÚ DE NAVEGACIÓN ================= */
 .navbar {
     background-color: #0d1b2a; 
     color: white;
     display: flex;
-    flex-wrap: wrap; /* Permite que los enlaces bajen a la siguiente línea */
+    flex-wrap: wrap; 
     justify-content: space-between;
     align-items: center;
     padding: 15px 40px;
-    position: relative; /* Necesario para centrar el logo perfectamente */
+    position: relative; 
     flex-shrink: 0;
-    padding: 5px;
 }
 
 .menu-btn {
@@ -44,7 +41,7 @@ body {
 .logo {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Centra el texto de forma exacta */
+    transform: translateX(-50%); 
     font-weight: 600;
     font-size: 1.2rem;
     letter-spacing: 2px;
@@ -69,20 +66,18 @@ body {
     color: #8d99ae;
 }
 
-/* Contenedor de enlaces */
 .nav-links {
     width: 100%;
-    display: none; /* Ocultos por defecto */
-    flex-direction: row; /* Aparecen en fila horizontal */
-    justify-content: center; /* Centrados */
+    display: none; 
+    flex-direction: row; 
+    justify-content: center; 
     list-style: none;
     gap: 30px;
     padding-top: 15px;
     margin-top: 10px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea divisoria sutil */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
 }
 
-/* Esta clase se agregará con JavaScript al hacer clic */
 .nav-links.mostrar {
     display: flex;
 }
@@ -100,7 +95,6 @@ body {
     color: white;
 }
 
-/* Hacer que en celulares los enlaces se pongan en columna en lugar de fila */
 @media (max-width: 600px) {
     .nav-links {
         flex-direction: column;
@@ -109,7 +103,6 @@ body {
     }
 }
 
-/* ================= BANNER PRINCIPAL (HERO - INICIO) ================= */
 .hero {
     position: relative;
     height: 450px;
@@ -127,13 +120,13 @@ body {
 }
 
 .hero h2 {
-    font-size: 3.5rem; /* Aumenta el tamaño significativamente */
+    font-size: 3.5rem; 
     letter-spacing: 3px;
-    font-weight: 900; /* Letra más gruesa para resaltar el contorno */
+    font-weight: 900; 
     margin-bottom: 20px;
     color: white; 
-    -webkit-text-stroke: 2px black; /* Agrega el contorno negro sólido */
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Sombra para darle profundidad extra */
+    -webkit-text-stroke: 2px black; 
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); 
 }
 
 .carousel-btn {
@@ -159,7 +152,6 @@ body {
     background: white;
 }
 
-/* ================= PRODUCTOS DESTACADOS (INICIO) ================= */
 .destacados {
     text-align: center;
     padding: 50px 20px;
@@ -208,7 +200,6 @@ body {
     transform: scale(1.05); 
 }
 
-/* ================= PÁGINA DE CATÁLOGO ================= */
 .contenedor-catalogo {
     padding: 40px 20px;
     max-width: 1280px;
@@ -292,15 +283,12 @@ body {
     background-color: #1a365d;
 }
 
-/* ================= MEDIA QUERIES (DISEÑO RESPONSIVE) ================= */
-/* Móviles: Desde 360px (1 columna) */
 @media (min-width: 360px) {
     .grilla-catalogo {
         grid-template-columns: 1fr;
     }
 }
 
-/* Tablets: Desde 768px (2 columnas) */
 @media (min-width: 768px) {
     .grilla-catalogo {
         grid-template-columns: repeat(2, 1fr);
@@ -311,14 +299,12 @@ body {
     }
 }
 
-/* Escritorio: Desde 1280px (4 columnas) */
 @media (min-width: 1280px) {
     .grilla-catalogo {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-/* ================= FOOTER ================= */
 footer {
     background-color: #0d1b2a;
     color: white;
@@ -407,7 +393,6 @@ footer {
     display: none;
 }
 
-/* ================= PÁGINA NOSOTROS ================= */
 .contenedor-nosotros {
     padding: 50px 20px;
     max-width: 1100px;
@@ -424,7 +409,7 @@ footer {
 
 .contenido-historia {
     display: flex;
-    flex-direction: column; /* Apilado en celulares por defecto */
+    flex-direction: column; 
     gap: 40px;
     background-color: white;
     padding: 30px;
@@ -452,23 +437,21 @@ footer {
     font-size: 1.05rem;
 }
 
-/* Diseño para Tablets y Computadores (2 columnas) */
 @media (min-width: 768px) {
     .contenido-historia {
-        flex-direction: row; /* Se pone uno al lado del otro */
+        flex-direction: row; 
         align-items: center;
     }
 
     .contenido-historia img {
-        width: 50%; /* La imagen ocupa la mitad */
+        width: 50%; 
     }
 
     .texto-historia {
-        width: 50%; /* El texto ocupa la otra mitad */
+        width: 50%; 
     }
 }
 
-/* ================= DETALLE DEL PRODUCTO (Aplica para todos los instrumentos) ================= */
 .contenedor-detalle {
     padding: 50px 20px;
     max-width: 1100px;
@@ -556,7 +539,6 @@ footer {
     background-color: #1a365d;
 }
 
-/* Diseño para Tablets y Computadores (2 columnas) */
 @media (min-width: 768px) {
     .vista-producto {
         flex-direction: row;
@@ -822,10 +804,10 @@ footer {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ocupa al menos el 100% del alto de la ventana */
+    min-height: 100vh; 
     margin: 0;
 }
 
 main {
-    flex: 1; /* Hace que el contenido principal crezca y empuje el footer al final */
+    flex: 1; 
 }

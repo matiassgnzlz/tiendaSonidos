@@ -21,6 +21,8 @@ body {
     align-items: center;
     padding: 15px 40px;
     position: relative; /* Necesario para centrar el logo perfectamente */
+    flex-shrink: 0;
+    padding: 5px;
 }
 
 .menu-btn {
@@ -30,9 +32,12 @@ body {
     font-size: 1.8rem;
     cursor: pointer;
     transition: color 0.3s;
+    flex-shrink: 0;
 }
 
-.menu-btn:hover {
+.menu-btn:hover,
+.menu-btn:focus {
+    outline: none;
     color: #8d99ae;
 }
 
@@ -48,6 +53,7 @@ body {
 .nav-actions {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .cart-btn {
@@ -121,10 +127,13 @@ body {
 }
 
 .hero h2 {
-    font-size: 1.5rem;
+    font-size: 3.5rem; /* Aumenta el tamaño significativamente */
     letter-spacing: 3px;
-    font-weight: 400;
+    font-weight: 900; /* Letra más gruesa para resaltar el contorno */
     margin-bottom: 20px;
+    color: white; 
+    -webkit-text-stroke: 2px black; /* Agrega el contorno negro sólido */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* Sombra para darle profundidad extra */
 }
 
 .carousel-btn {
@@ -477,7 +486,7 @@ footer {
 }
 
 .imagen-detalle {
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     text-align: center;

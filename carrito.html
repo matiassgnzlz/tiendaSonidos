@@ -10,20 +10,30 @@
 <body>
 
     <header>
-        <nav class="navbar">
-            <div class="logo">HEARTZ TOOLS</div>
-            <ul class="nav-links">
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="catalogo.html">CATÁLOGO</a></li>
-                <li><a href="nosotros.html">NOSOTROS</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="cart-btn" style="color: white;"><i class="fas fa-shopping-cart"></i></button>
-                <button class="login-btn">INICIAR SESIÓN</button>
-            </div>
-        </nav>
-    </header>
+            <nav class="navbar">
+                <!-- Botón Hamburguesa a la izquierda -->
+                <button class="menu-btn" id="btn-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Logo centrado -->
+<a href="index.html" class="logo" style="text-decoration: none; color: inherit;">HEARTZ TOOLS</a>
+                
+                <!-- Carrito a la derecha -->
+                <div class="nav-actions">
+                    <a href="carrito.html" class="cart-btn"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+
+                <!-- Enlaces abajo (ocultos por defecto) -->
+                <ul class="nav-links" id="enlaces-menu">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="catalogo.html">CATÁLOGO</a></li> 
+                    <li><a href="nosotros.html">NOSOTROS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li><a href="login.html">INICIAR SESIÓN</a></li>
+                </ul>
+            </nav>
+        </header>
 
     <main class="contenedor-carrito">
         <h2>TU CARRITO DE COMPRAS</h2>
@@ -59,5 +69,15 @@
     </footer>
 
     <script src="assets/js/validaciones.js"></script>
+
+    <script>
+        const btnMenu = document.getElementById('btn-menu');
+        const enlacesMenu = document.getElementById('enlaces-menu');
+
+        btnMenu.addEventListener('click', () => {
+            enlacesMenu.classList.toggle('mostrar');
+        });
+    </script>
+
 </body>
 </html>
